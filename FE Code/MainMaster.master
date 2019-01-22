@@ -1,0 +1,198 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="MainMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxtoolkit" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hotel Reservation System</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" >
+        function UserId() {
+            if (txtUserId.length != 5) {
+                window.alert("UserId should contain 5 characters");
+            }
+        }
+        function Contact() {
+            if (txtContact.length != 10) {
+                window.alert("Please enter a valid 10 digit number ");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+ <ajaxtoolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+ </ajaxtoolkit:ToolkitScriptManager>
+   <div id="templatemo_container">
+	<!-- Free Website Template by www.TemplateMo.com -->
+    <div id="templatemo_header">
+        <div id="website_title">
+            <div id="title">
+	            Hotel Reservation 
+            </div>
+            <div id="salgon">
+	            The best service at the lowest price</div>
+        </div>
+    </div> <!-- end of header -->
+    
+    <div id="templatemo_banner">
+    	<div id="Div1" runat="server">
+        <br />
+        <center>
+            
+                    <h3><a style="padding:20px" href="Add_Hotel.aspx" class="current">Add Hotel</a>
+                  <a style="padding:20px" href="Delete_Edit_Hotel.aspx" class="current">Edit Hotel</a>
+                    <a style="padding:20px" href="Delete_Edit_Hotel.aspx" class="current">Delete Hotel</a>
+                    <a style="padding:20px" href="../Login.aspx">SignOut</a></h3>
+                  
+                    
+                
+                </center>
+        </div>  
+         <div id="Div2" runat="server">
+         <br />
+           
+                <center>
+            
+                   <h3>
+                      <%-- <asp:LinkButton ID="LbBookHotel" runat="server" 
+                           PostBackUrl="~/UserForms/Book_Hotel.aspx" CausesValidation="False">Book Hotel</asp:LinkButton>--%>
+                           <asp:LinkButton ID="LbSearchHotel" runat="server" 
+                           PostBackUrl="~/Search_Hotel.aspx" CausesValidation="False">Search Hotel</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <asp:LinkButton ID="LbCancelBooking" runat="server" 
+                           PostBackUrl="~/UserForms/Cancel_Booking.aspx" CausesValidation="False">Cancel/Edit Booking</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+
+ <asp:LinkButton ID="LbChangePassword" runat="server" 
+                           PostBackUrl="~/UserForms/Change_Password.aspx" CausesValidation="False">Change Password</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <asp:LinkButton ID="LbSignout" runat="server" 
+                           PostBackUrl="~/Login.aspx" CausesValidation="False">Sign Out</asp:LinkButton>
+
+                   </h3>
+                </center>
+            </div>  
+    </div> <!-- end of banner -->
+    
+    <div id="templatemo_content">
+   
+    	<div id="content_left">
+         <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+        	
+            
+            
+        </asp:ContentPlaceHolder>
+        	
+            
+            <div class="cleaner_h30">&nbsp;</div>
+            <div class="cleaner_horizontal_divider_01">&nbsp;</div>
+            <div class="cleaner_h30">&nbsp;</div>
+             
+            <div class="content_left_section">
+            <div class="content_title_01">Latest News</div>
+                
+                <div class="news_title">For the author of a lion</div>
+                
+
+
+ 
+
+
+
+                    <p>Gaming is no competition, there is lot of wind, as in arrows, to adorn or ugly. Live football enimvitae nor put its makeup.</p>
+                <div class="cleaner_h30">&nbsp;</div>
+
+                <div class="news_title">Stress quiver eros employee</div>
+                    <p>Live football enimvitae nor put its makeup. In fact, from the layer of the valley, perhaps tor ornare turpis at turpis employee.</p>
+                  <div class="cleaner_h20">&nbsp;</div>
+                    <div class="rc_btn_02"></div>         
+                </div>   <!-- end of news section -->
+                <div class="cleaner_h30">&nbsp;</div>
+
+            <div class="cleaner_horizontal_divider_01">&nbsp;</div>
+            <div class="cleaner_h30">&nbsp;</div>
+            
+            <a href="#"><img src="images/templatemo_special_offer.jpg" alt="special offer" /></a>
+          <div class="cleaner_h30">&nbsp;</div>
+        </div> <!-- end of content left -->
+        
+        <div id="content_right">
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        	
+            
+            
+        </asp:ContentPlaceHolder>
+            <div class="content_right_section">
+                <div class="content_title_01">Gallery</div>
+                    <div class="gallery_box">
+                    	<img src="images/templatemo_image_02.jpg" alt="image" />
+                        <a href="#">one</a>
+                    </div>
+                    <div class="gallery_box">
+	                    <img src="images/templatemo_image_03.jpg" alt="image" />
+                        <a href="#">two</a>
+                    </div>
+                    <div class="gallery_box">
+	                    <img src="images/templatemo_image_04.jpg" alt="image" />
+                        <a href="#">three</a>
+                    </div>
+                    <div class="gallery_box">
+                    	<img src="images/templatemo_image_05.jpg" alt="image" />
+                        <a href="#">four</a>
+                    </div>
+                    <div class="gallery_box">
+                    	<img src="images/templatemo_image_06.jpg" alt="image" />
+                        <a href="#">five</a>
+                    </div>
+                    
+                    <div class="cleaner_h20">&nbsp;</div>
+                    <div class="rc_btn_02"></div>
+                    
+                    <div class="cleaner">&nbsp;</div>
+			</div>                    
+        	<div class="cleaner_h20">&nbsp;</div>
+        </div> <!-- end of content right -->
+        
+        <div class="cleaner">&nbsp;</div>
+    </div>
+    
+    <div id="templatemo_footer">
+    Copyright © 2014 <a href="#"><strong>Hotel Reservation System</strong></a>
+    <!-- Credit: www.templatemo.com -->
+        <div style="clear: both; margin-top: 10px;">                
+            <a href="http://validator.w3.org/check?uri=referer"></a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer"></a>
+        </div> 
+	</div> <!-- end of footer -->
+</div> <!-- end of container -->
+<!-- Free Website Templates @ TemplateMo.com -->
+<!-- templatemo 104 hotel -->
+<!-- 
+Hotel Template 
+http://www.templatemo.com/preview/templatemo_104_hotel 
+-->
+    </form>
+</body>
+<%--<head runat="server">
+    <title></title>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>--%>
+</html>
